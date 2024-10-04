@@ -1,0 +1,14 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+#body_container {
+  display: flex;
+  background-color: #03318c;
+}
