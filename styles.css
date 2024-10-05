@@ -1,7 +1,6 @@
 body {
   padding: 0px;
   margin: 0px;
-  font-family: Arial, sans-serif;
 }
 
 .cabecera {
@@ -9,29 +8,42 @@ body {
   justify-content: center;
   background-color: #03318c;
   color: white;
+  gap: 8px;
 }
-
+.cabecera-logo {
+  max-width: 30px;
+  max-height: 30px;
+  margin-top: 25px;
+}
 .body_container {
   display: flex;
   padding: 30px;
-  justify-content: space-between;
+  gap: 10px;
 }
 
 #products_container {
   display: flex;
-  min-width: 700px;
-  justify-content: center;
+  flex-direction: column;
+  min-width: 800px;
 }
-
+#product_title {
+  text-align: center;
+}
+#form_container {
+  display: block;
+}
 #productForm {
   display: flex;
   flex-direction: column;
   margin: 30px 80px 0px 0px;
-  align-self: center;
   min-width: 300px;
   padding: 20px;
   gap: 10px;
   border: 2px solid #03318c;
+  border-radius: 5px;
+}
+form {
+  display: block;
 }
 input {
   border-radius: 50px;
@@ -45,31 +57,65 @@ button {
   min-height: 30px;
   border-radius: 5px;
   align-self: center;
-  margin-right: 170px;
 }
-
+#product_list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 750px;
+  gap: 8px;
+}
 .product-card {
-  border: 1px solid #ccc;
+  border: 1px solid #211485;
+  background-color: #03318c;
   border-radius: 5px;
+  border: 2px solid black;
   padding: 10px;
-  margin-top: 10px;
-  display: inline-block;
   text-align: center;
-  width: 150px;
+  width: 220px;
+  height: 280px;
 }
 
 .product-card img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 180px;
   object-fit: cover;
   margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.product-card div {
+  display: flex;
+  gap: 45px;
 }
 
-.product-card h2 {
+.product-card h3 {
   font-size: 18px;
+  text-align: left;
   margin: 5px 0;
+  color: white;
 }
 
 .product-card p {
-  color: green;
+  font-size: 18px;
+  text-align: left;
+  margin: 5px 0;
+  color: white;
+  min-width: 120px;
+}
+
+.delete-btn {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  border-radius: 100%;
+}
+.delete-btn img {
+  width: 25px;
+  height: 25px;
+  border: none;
+}
+.pie_pagina {
+  display: flex;
+  background-color: #211485;
+  justify-content: center;
 }
