@@ -1,6 +1,7 @@
-body {
+* {
   padding: 0px;
   margin: 0px;
+  overflow-x: hidden;
 }
 
 .cabecera {
@@ -10,11 +11,15 @@ body {
   color: white;
   gap: 8px;
 }
+.cabecera h1 {
+  margin-top: 20px;
+}
 .cabecera-logo {
   max-width: 30px;
   max-height: 30px;
   margin-top: 25px;
 }
+
 .body_container {
   display: flex;
   padding: 30px;
@@ -24,18 +29,16 @@ body {
 #products_container {
   display: flex;
   flex-direction: column;
-  min-width: 800px;
+  min-width: 700px;
 }
 #product_title {
   text-align: center;
 }
-#form_container {
-  display: block;
-}
+
 #productForm {
   display: flex;
   flex-direction: column;
-  margin: 30px 80px 0px 0px;
+  margin: 37px 80px 0px 0px;
   min-width: 300px;
   padding: 20px;
   gap: 10px;
@@ -61,8 +64,12 @@ button {
 #product_list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   max-width: 750px;
   gap: 8px;
+  border: 2px solid #03318c;
+  border-radius: 5px;
+  padding: 5px;
 }
 .product-card {
   border: 1px solid #211485;
@@ -107,7 +114,6 @@ button {
   display: flex;
   background-color: transparent;
   border: none;
-  border-radius: 100%;
 }
 .delete-btn img {
   width: 25px;
@@ -116,6 +122,273 @@ button {
 }
 .pie_pagina {
   display: flex;
-  background-color: #211485;
   justify-content: center;
+  background-color: #211485;
+  margin-top: 40px;
+  gap: 5px;
+}
+.pie_pagina h1 {
+  margin-top: 20px;
+  color: white;
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .cabecera {
+    display: flex;
+    justify-content: center;
+    background-color: #03318c;
+    color: white;
+    gap: 8px;
+  }
+  .cabecera h1 {
+    margin-top: 20px;
+  }
+  .cabecera-logo {
+    max-width: 30px;
+    max-height: 30px;
+    margin-top: 25px;
+  }
+
+  .body_container {
+    display: flex;
+    padding: 30px;
+    gap: 5px;
+  }
+
+  #products_container {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+  }
+  #product_title {
+    text-align: center;
+  }
+  #form_container {
+    display: block;
+  }
+  #productForm {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 80px 0px 0px;
+    min-width: 200px;
+    padding: 20px;
+    gap: 10px;
+    border: 2px solid #03318c;
+    border-radius: 5px;
+  }
+  form {
+    display: block;
+  }
+  input {
+    border-radius: 30px;
+    max-width: 200px;
+    min-height: 30px;
+    padding: 3px;
+    font-size: small;
+  }
+  button {
+    min-width: 70px;
+    min-height: 30px;
+    border-radius: 5px;
+    align-self: center;
+  }
+  #product_list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 350px;
+    gap: 5px;
+  }
+  .product-card {
+    border: 1px solid #211485;
+    background-color: #03318c;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 220px;
+    height: 280px;
+  }
+
+  .product-card img {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+  .product-card div {
+    display: flex;
+    gap: 45px;
+  }
+
+  .product-card h3 {
+    font-size: 18px;
+    text-align: left;
+    margin: 5px 0;
+    color: white;
+  }
+
+  .product-card p {
+    font-size: 18px;
+    text-align: left;
+    margin: 5px 0;
+    color: white;
+    min-width: 120px;
+  }
+
+  .delete-btn {
+    display: flex;
+    background-color: transparent;
+    border: none;
+  }
+  .delete-btn img {
+    width: 25px;
+    height: 25px;
+    border: none;
+  }
+  .pie_pagina {
+    display: flex;
+    justify-content: center;
+    background-color: #211485;
+    margin-top: 40px;
+    gap: 5px;
+  }
+  .pie_pagina h1 {
+    margin-top: 20px;
+    color: white;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 500px) {
+  .cabecera {
+    display: flex;
+    background-color: #03318c;
+    color: white;
+    padding: 5px;
+  }
+
+  .cabecera h1 {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .cabecera-logo {
+    width: 100%;
+    max-height: 30px;
+    margin-top: 25px;
+  }
+
+  .body_container {
+    flex-wrap: wrap;
+    padding: 5px;
+    gap: 5px;
+  }
+
+  #products_container {
+    min-width: 250px;
+
+    order: 2;
+  }
+
+  #product_title {
+    text-align: center;
+  }
+
+  #productForm {
+    max-width: 100%;
+    margin-left: 3px;
+    gap: 5px;
+    border: 2px solid #03318c;
+    border-radius: 5px;
+    order: -1;
+  }
+  #productForm h1 {
+    font-size: larger;
+  }
+
+  input {
+    border-radius: 50px;
+    min-width: 230px;
+    min-height: 30px;
+    font-size: small;
+  }
+
+  button {
+    min-width: 100px;
+    min-height: 30px;
+    border-radius: 5px;
+    align-self: center;
+  }
+
+  #product_list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 750px;
+    justify-content: center;
+    gap: 8px;
+    order: 2;
+  }
+
+  .product-card {
+    width: 100%;
+    background-color: #03318c;
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 280px;
+    position: relative;
+  }
+
+  .product-card img {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+
+  .product-card div {
+    display: flex;
+    gap: 45px;
+  }
+
+  .product-card h3 {
+    font-size: 18px;
+    text-align: left;
+    margin: 5px 0;
+    color: white;
+  }
+
+  .product-card p {
+    font-size: 18px;
+    text-align: left;
+    margin: 5px 0;
+    color: white;
+    min-width: 120px;
+  }
+
+  .delete-btn {
+    display: flex;
+    background-color: transparent;
+    border: none;
+  }
+
+  .delete-btn img {
+    width: 25px;
+    height: 25px;
+    border: none;
+  }
+
+  .pie_pagina {
+    display: flex;
+    justify-content: center;
+    background-color: #211485;
+    margin-top: 40px;
+    gap: 5px;
+  }
+
+  .pie_pagina h1 {
+    margin-top: 20px;
+    color: white;
+  }
 }
